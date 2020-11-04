@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sbj/components/like_page.dart';
 
 void main() {
   // 最初に表示するWidget
@@ -38,7 +39,7 @@ class _HomePageState extends State<HomePage> {
   static List<Widget> _pageList = [
     CustomPage(title: 'Home'),
     CustomPage(title: 'Coffee'),
-    CustomPage(title: 'Like'),
+    LikePage(title: 'Like'),
   ];
   @override
   Widget build(BuildContext context) {
@@ -51,15 +52,15 @@ class _HomePageState extends State<HomePage> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.add),
-            title: Text('Home'),
+            label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.local_cafe),
-            title: Text('Coffee'),
+            label: 'Coffee',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite),
-            title: Text('Like'),
+            label: 'Like',
           ),
         ],
         currentIndex: _selectedIndex,
